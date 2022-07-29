@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Configuration\**" />
+    <Compile Remove="Files\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="Configuration\**" />
+    <Content Remove="Files\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Configuration\**" />
+    <EmbeddedResource Remove="Files\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Configuration\**" />
+    <None Remove="Files\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NeToro.BL\NeToro.BL.csproj" />
+    <ProjectReference Include="..\NeToro.InputModels\NeToro.Interfaces.csproj" />
+    <ProjectReference Include="..\NeToro.Validation\NeToro.Validation.csproj" />
+  </ItemGroup>
+
+</Project>
